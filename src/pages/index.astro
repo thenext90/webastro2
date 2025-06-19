@@ -1,0 +1,800 @@
+---
+// src/pages/index.astro
+// Frontmatter vacío por ahora
+---
+[file name]: index.txt
+[file content begin]
+---
+// Global Technology Quality - Página Principal (Optimizado)
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Technology Quality - Consultoría ISO</title>
+    <meta name="description" content="Especialistas en auditoría, implementación y capacitación de sistemas de gestión ISO. Certificaciones ISO 9001, 14001, 45001, 27001 y más." />
+    
+    <!-- SEO Optimization -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.globaltechquality.com">
+    <meta name="keywords" content="consultoría iso, certificación iso, auditoría iso, iso 9001, iso 14001, iso 45001, global technology quality">
+    <meta name="author" content="Global Technology Quality">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Global Technology Quality - Consultoría ISO">
+    <meta property="og:description" content="Especialistas en auditoría, implementación y capacitación de sistemas de gestión ISO">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.globaltechquality.com">
+    <meta property="og:image" content="https://www.globaltechquality.com/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .service-card, .stat-card {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+      }
+      
+      .service-card:nth-child(1) { animation-delay: 0.1s; }
+      .service-card:nth-child(2) { animation-delay: 0.3s; }
+      .service-card:nth-child(3) { animation-delay: 0.5s; }
+      
+      /* Back to top button */
+      #back-to-top {
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-900 bg-white antialiased">
+    <!-- Header Navigation -->
+    <header class="bg-white border-b border-gray-200 fixed w-full top-0 z-50 backdrop-blur-sm bg-white/95">
+      <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <h1 class="text-2xl font-bold text-slate-800 tracking-tight">
+                <span class="text-blue-700">Global</span> Technology Quality
+              </h1>
+              <p class="text-xs text-gray-500 font-medium tracking-wide">ISO CONSULTING SERVICES</p>
+            </div>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center space-x-8">
+            <a href="#inicio" class="text-gray-700 hover:text-blue-700 font-medium text-sm uppercase tracking-wide transition-colors duration-200">
+              Inicio
+            </a>
+            <a href="#nosotros" class="text-gray-700 hover:text-blue-700 font-medium text-sm uppercase tracking-wide transition-colors duration-200">
+              Nosotros
+            </a>
+            <a href="#servicios" class="text-gray-700 hover:text-blue-700 font-medium text-sm uppercase tracking-wide transition-colors duration-200">
+              Servicios
+            </a>
+            <a href="#contacto" class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-sm font-medium text-sm uppercase tracking-wide transition-colors duration-200">
+              Contacto
+            </a>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <div class="lg:hidden">
+            <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-700 focus:outline-none" aria-label="Abrir menú" aria-expanded="false">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#inicio" class="block px-3 py-2 text-gray-700 hover:text-blue-700 font-medium text-sm uppercase tracking-wide">
+              Inicio
+            </a>
+            <a href="#nosotros" class="block px-3 py-2 text-gray-700 hover:text-blue-700 font-medium text-sm uppercase tracking-wide">
+              Nosotros
+            </a>
+            <a href="#servicios" class="block px-3 py-2 text-gray-700 hover:text-blue-700 font-medium text-sm uppercase tracking-wide">
+              Servicios
+            </a>
+            <a href="#contacto" class="block px-3 py-2 text-gray-700 hover:text-blue-700 font-medium text-sm uppercase tracking-wide">
+              Contacto
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Principal -->
+    <section id="inicio" class="relative bg-slate-50 pt-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-full mb-6">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Certificación ISO Internacional
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+              Consultoría ISO <span class="text-blue-700">Profesional</span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-2xl">
+              Ayudamos a empresas e instituciones a implementar, auditar y certificar sistemas de gestión basados en normativas ISO con más de 15 años de experiencia internacional.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#contacto" class="inline-flex items-center justify-center px-8 py-4 bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-sm transition-colors duration-200">
+                Solicitar Consulta
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+              <a href="#servicios" class="inline-flex items-center justify-center px-8 py-4 border border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 font-semibold rounded-sm transition-colors duration-200">
+                Ver Servicios
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-white rounded-lg shadow-xl p-8 border border-gray-100 stat-card">
+              <div class="grid grid-cols-2 gap-6">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-700 mb-2">15+</div>
+                  <div class="text-sm text-gray-600 font-medium">Años de Experiencia</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-700 mb-2">500+</div>
+                  <div class="text-sm text-gray-600 font-medium">Empresas Certificadas</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-700 mb-2">4</div>
+                  <div class="text-sm text-gray-600 font-medium">Países de Operación</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-700 mb-2">98%</div>
+                  <div class="text-sm text-gray-600 font-medium">Tasa de Éxito</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiénes Somos -->
+    <section id="nosotros" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+            Quiénes Somos
+          </h2>
+          <div class="w-24 h-1 bg-blue-700 mx-auto"></div>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+              Global Technology Quality es una consultora especializada en sistemas de gestión ISO con presencia internacional. Contamos con un equipo de auditores certificados y consultores expertos que trabajan con organizaciones públicas y privadas para implementar, auditar y mantener estándares de calidad de clase mundial.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+              Nuestra red de alianzas estratégicas en Chile, España, Perú e Italia nos permite ofrecer servicios integrales y soluciones adaptadas a cada sector industrial.
+            </p>
+            
+            <div class="bg-slate-50 border-l-4 border-blue-700 p-6 rounded-r-lg">
+              <blockquote class="text-lg italic text-gray-700 mb-4">
+                "Cada vez que tomo decisiones, trato de reducir los riesgos y problemas que puedan existir…"
+              </blockquote>
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                  FM
+                </div>
+                <div>
+                  <cite class="text-slate-900 font-semibold block">Francisco Medina</cite>
+                  <span class="text-gray-500 text-sm">CEO, Global Technology Quality</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-blue-50 p-6 rounded-lg text-center">
+              <div class="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">Certificación</h3>
+              <p class="text-sm text-gray-600">Auditores certificados internacionalmente</p>
+            </div>
+            
+            <div class="bg-green-50 p-6 rounded-lg text-center">
+              <div class="w-12 h-12 bg-green-700 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">Internacional</h3>
+              <p class="text-sm text-gray-600">Presencia en 4 países</p>
+            </div>
+            
+            <div class="bg-orange-50 p-6 rounded-lg text-center">
+              <div class="w-12 h-12 bg-orange-700 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">Experiencia</h3>
+              <p class="text-sm text-gray-600">Más de 15 años en el mercado</p>
+            </div>
+            
+            <div class="bg-purple-50 p-6 rounded-lg text-center">
+              <div class="w-12 h-12 bg-purple-700 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900 mb-2">Equipo</h3>
+              <p class="text-sm text-gray-600">Consultores especializados</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios Principales -->
+    <section id="servicios" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+            Nuestros Servicios
+          </h2>
+          <div class="w-24 h-1 bg-blue-700 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ofrecemos servicios integrales de consultoría ISO adaptados a las necesidades específicas de cada organización.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8">
+          <!-- Auditoría & Certificación -->
+          <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden service-card">
+            <div class="p-8">
+              <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900">Auditoría & Certificación ISO</h3>
+              <p class="text-gray-600 mb-6">Auditorías especializadas para certificación internacional con estándares de clase mundial.</p>
+              
+              <div class="space-y-3">
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  ISO 9001 (Gestión de Calidad)
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  ISO 14001 (Gestión Ambiental)
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  ISO 45001 (Seguridad y Salud)
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  ISO 27001 (Seguridad de la Información)
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  ISO 50001 (Gestión Energética)
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  HACCP y ISO 22000 (Seguridad Alimentaria)
+                </div>
+              </div>
+            </div>
+            <div class="px-8 pb-8">
+              <a href="#contacto" class="block w-full text-center bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded-sm transition-colors duration-200">
+                Consultar Servicio
+              </a>
+            </div>
+          </div>
+
+          <!-- Implementación -->
+          <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden service-card">
+            <div class="p-8">
+              <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900">Implementación de Sistemas ISO</h3>
+              <p class="text-gray-600 mb-6">Desarrollo completo desde diagnóstico hasta certificación con metodología probada.</p>
+              
+              <div class="space-y-3">
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Diagnóstico inicial y análisis de brechas
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Planificación estratégica personalizada
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Desarrollo de documentación técnica
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Capacitación integral de equipos
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Auditoría interna (segunda parte)
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Acompañamiento a certificación
+                </div>
+              </div>
+            </div>
+            <div class="px-8 pb-8">
+              <a href="#contacto" class="block w-full text-center bg-green-700 hover:bg-green-800 text-white font-semibold py-3 rounded-sm transition-colors duration-200">
+                Consultar Servicio
+              </a>
+            </div>
+          </div>
+
+          <!-- Capacitación -->
+          <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden service-card">
+            <div class="p-8">
+              <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-orange-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900">Capacitación y Certificación</h3>
+              <p class="text-gray-600 mb-6">Formación especializada con certificación de competencias reconocida internacionalmente.</p>
+              
+              <div class="space-y-3">
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Cursos con franquicia SENCE
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Formación de auditores internos
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Evaluación de competencias
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Certificación internacional
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Talleres especializados
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                  <svg class="w-4 h-4 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  Capacitación in-company
+                </div>
+              </div>
+            </div>
+            <div class="px-8 pb-8">
+              <a href="#contacto" class="block w-full text-center bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 rounded-sm transition-colors duration-200">
+                Consultar Servicio
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confían en Nosotros -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+            Confían en Nosotros
+          </h2>
+          <div class="w-24 h-1 bg-blue-700 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Confían en nosotros organizaciones públicas y privadas de diversos sectores, en Chile y el extranjero.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+          <div class="bg-slate-50 border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow duration-300 flex items-center justify-center h-24">
+            <span class="text-sm font-semibold text-gray-700 text-center leading-tight">C.Q.S Certification Quality S</span>
+          </div>
+          <div class="bg-slate-50 border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow duration-300 flex items-center justify-center h-24">
+            <div class="text-center">
+              <span class="text-sm font-semibold text-gray-700 block">Grupo IVAC</span>
+              <span class="text-xs text-gray-500">España</span>
+            </div>
+          </div>
+          <div class="bg-slate-50 border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow duration-300 flex items-center justify-center h-24">
+            <div class="text-center">
+              <span class="text-sm font-semibold text-gray-700 block">CMS Consultores</span>
+              <span class="text-xs text-gray-500">Chile</span>
+            </div>
+          </div>
+          <div class="bg-slate-50 border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow duration-300 flex items-center justify-center h-24">
+            <div class="text-center">
+              <span class="text-sm font-semibold text-gray-700 block">AMZU</span>
+              <span class="text-xs text-gray-500">Chile</span>
+            </div>
+          </div>
+          <div class="bg-slate-50 border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow duration-300 flex items-center justify-center h-24">
+            <div class="text-center">
+              <span class="text-sm font-semibold text-gray-700 block">ACONCAP</span>
+              <span class="text-xs text-gray-500">Perú</span>
+            </div>
+          </div>
+          <div class="bg-slate-50 border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow duration-300 flex items-center justify-center h-24">
+            <div class="text-center">
+              <span class="text-sm font-semibold text-gray-700 block">Auditservic</span>
+              <span class="text-xs text-gray-500">Italia</span>
+            </div>
+          </div>
+          <div class="bg-slate-50 border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow duration-300 flex items-center justify-center h-24">
+            <span class="text-sm font-semibold text-gray-700 text-center leading-tight">Cámara Chileno-Británica</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-24 bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+            ¿Tienes un desafío en gestión ISO?
+          </h2>
+          <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos de certificación.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h3 class="text-2xl font-bold mb-8">Información de Contacto</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg mb-2">Oficina Principal</h4>
+                  <p class="text-gray-300">Santiago, Chile</p>
+                  <p class="text-gray-300">Presencia internacional en España, Perú e Italia</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg mb-2">Email</h4>
+                  <p class="text-gray-300">contacto@globaltechquality.com</p>
+                  <p class="text-gray-300">info@globaltechquality.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg mb-2">Horario de Atención</h4>
+                  <p class="text-gray-300">Lunes a Viernes: 9:00 - 18:00</p>
+                  <p class="text-gray-300">Sábados: 9:00 - 13:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg p-8 text-gray-900">
+            <h3 class="text-2xl font-bold mb-6 text-slate-900">Solicitar Consulta</h3>
+            <form id="contact-form" class="space-y-6">
+              <!-- Mensaje de estado -->
+              <div id="form-message" class="hidden p-4 rounded-lg"></div>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label for="nombre" class="block text-sm font-semibold text-gray-700 mb-2">Nombre *</label>
+                  <input type="text" id="nombre" name="nombre" required 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                </div>
+                <div>
+                  <label for="empresa" class="block text-sm font-semibold text-gray-700 mb-2">Empresa *</label>
+                  <input type="text" id="empresa" name="empresa" required 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                </div>
+              </div>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                  <input type="email" id="email" name="email" required 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                </div>
+                <div>
+                  <label for="telefono" class="block text-sm font-semibold text-gray-700 mb-2">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" 
+                         class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                </div>
+              </div>
+              
+              <div>
+                <label for="servicio" class="block text-sm font-semibold text-gray-700 mb-2">Servicio de Interés *</label>
+                <select id="servicio" name="servicio" required 
+                        class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                  <option value="">Seleccionar servicio</option>
+                  <option value="auditoria">Auditoría & Certificación ISO</option>
+                  <option value="implementacion">Implementación de Sistemas ISO</option>
+                  <option value="capacitacion">Capacitación y Certificación</option>
+                  <option value="consultoria">Consultoría General</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="mensaje" class="block text-sm font-semibold text-gray-700 mb-2">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" 
+                          class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200" 
+                          placeholder="Cuéntanos sobre tu proyecto o necesidad..."></textarea>
+              </div>
+              
+              <div class="flex items-center">
+                <input id="privacy" type="checkbox" required
+                       class="w-4 h-4 text-blue-700 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
+                <label for="privacy" class="ml-2 text-sm text-gray-700">
+                  Acepto la política de privacidad
+                </label>
+              </div>
+              
+              <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 px-8 rounded-sm text-lg transition-colors duration-200 flex items-center justify-center">
+                <span id="submit-text">Solicitar Consulta</span>
+                <svg id="submit-spinner" class="ml-2 w-5 h-5 text-white animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-12 px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-bold mb-4">
+              <span class="text-blue-400">Global</span> Technology Quality
+            </h3>
+            <p class="text-gray-300 mb-4 max-w-md">
+              Consultoría especializada en sistemas de gestión ISO con presencia internacional. Más de 15 años ayudando a organizaciones a alcanzar la excelencia operacional.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors duration-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                </svg>
+              </a>
+              <a href="#" class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors duration-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Servicios</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li><a href="#servicios" class="hover:text-white transition-colors duration-200">Auditoría ISO</a></li>
+              <li><a href="#servicios" class="hover:text-white transition-colors duration-200">Implementación</a></li>
+              <li><a href="#servicios" class="hover:text-white transition-colors duration-200">Capacitación</a></li>
+              <li><a href="#servicios" class="hover:text-white transition-colors duration-200">Consultoría</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Empresa</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li><a href="#nosotros" class="hover:text-white transition-colors duration-200">Nosotros</a></li>
+              <li><a href="#contacto" class="hover:text-white transition-colors duration-200">Contacto</a></li>
+              <li><a href="#" class="hover:text-white transition-colors duration-200">Casos de Éxito</a></li>
+              <li><a href="#" class="hover:text-white transition-colors duration-200">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-700 pt-8 text-center">
+          <p class="text-gray-400">
+            © 2024 Global Technology Quality. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu, Smooth Scrolling, Form Validation, and Scroll Effects -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+          this.setAttribute('aria-expanded', mobileMenu.classList.contains('hidden') ? 'false' : 'true');
+        });
+        
+        // Form Validation
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        const submitText = document.getElementById('submit-text');
+        const submitSpinner = document.getElementById('submit-spinner');
+        
+        if (contactForm) {
+          contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Mostrar spinner
+            submitText.textContent = 'Enviando...';
+            submitSpinner.classList.remove('hidden');
+            
+            // Validación básica
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const servicio = document.getElementById('servicio').value;
+            const privacy = document.getElementById('privacy').checked;
+            
+            if (!nombre || !email || !servicio || !privacy) {
+              showFormMessage('Por favor complete todos los campos requeridos', 'error');
+              submitText.textContent = 'Solicitar Consulta';
+              submitSpinner.classList.add('hidden');
+              return;
+            }
+            
+            // Simular envío exitoso (en producción se conectaría a Bolt.new)
+            setTimeout(() => {
+              showFormMessage('¡Gracias por su mensaje! Nos pondremos en contacto pronto', 'success');
+              contactForm.reset();
+              submitText.textContent = 'Solicitar Consulta';
+              submitSpinner.classList.add('hidden');
+            }, 1500);
+          });
+        }
+        
+        function showFormMessage(message, type) {
+          formMessage.textContent = message;
+          formMessage.className = 'p-4 rounded-lg block';
+          
+          if (type === 'error') {
+            formMessage.classList.add('bg-red-100', 'text-red-700');
+          } else if (type === 'success') {
+            formMessage.classList.add('bg-green-100', 'text-green-700');
+          }
+        }
+        
+        // Scroll to Top Button
+        const backToTopBtn = document.createElement('button');
+        backToTopBtn.innerHTML = '↑';
+        backToTopBtn.id = 'back-to-top';
+        backToTopBtn.className = 'fixed bottom-8 right-8 p-3 bg-blue-700 text-white rounded-full shadow-lg hover:bg-blue-800 transition-all duration-300 opacity-0 invisible z-50';
+        backToTopBtn.setAttribute('aria-label', 'Volver arriba');
+        document.body.appendChild(backToTopBtn);
+        
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        window.addEventListener('scroll', () => {
+          if (window.pageYOffset > 300) {
+            backToTopBtn.classList.remove('opacity-0', 'invisible');
+            backToTopBtn.classList.add('opacity-100', 'visible');
+          } else {
+            backToTopBtn.classList.remove('opacity-100', 'visible');
+            backToTopBtn.classList.add('opacity-0', 'invisible');
+          }
+        });
+        
+        // Google Analytics (reemplaza con tu ID)
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+      });
+    </script>
+    
+    <!-- 
+      Vercel Optimization:
+      - Usar next/image para optimización automática de imágenes
+      - Implementar ISR (Incremental Static Regeneration) para páginas estáticas
+      - Usar Vercel Analytics para métricas de rendimiento
+      - Configurar headers de seguridad en vercel.json:
+        {
+          "headers": [
+            {
+              "source": "/(.*)",
+              "headers": [
+                { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+                { "key": "X-Content-Type-Options", "value": "nosniff" },
+                { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+              ]
+            }
+          ]
+        }
+    -->
+  </body>
+</html>
+[file content end]
